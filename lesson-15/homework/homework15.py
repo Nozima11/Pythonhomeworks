@@ -7,7 +7,6 @@ conn.commit()
 conn.close()
 
 # 2
-import sqlite3
 conn = sqlite3.connect("mydatabase.db")
 cur = conn.cursor()
 cur.execute("""
@@ -20,7 +19,6 @@ conn.close()
 print("Data is added to the table.")
 
 # 3
-import sqlite3
 conn = sqlite3.connect("mydatabase.db")
 cur = conn.cursor()
 cur.execute("update Roster set Name = 'Ezri Dax' where Name = 'Jadzia Dax'")
@@ -29,7 +27,6 @@ conn.close()
 print("updated")
 
 # 4
-import sqlite3
 conn = sqlite3.connect("mydatabase.db")
 cur = conn.cursor()
 cur.execute("select Name, Age from Roster where Species = 'Bajoran'")
